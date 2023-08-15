@@ -39,4 +39,16 @@ a {
     font-weight: 600;
     border-radius: 5px;
 }
-
+.main-wrapp {
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.main-headline {
+    letter-spacing: 1.5px;
+    font-size: 32px;
+    padding: 20px;
+}
