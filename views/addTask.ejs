@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/add-task.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+        <section class="add-task">
+
+        
+    <h1 class="add-task-headline">Dodaj zadanie</h1><br>
+    <section>
+        <form action="/addTask" method="POST">
+            <label>Nazwa zadania</label><br>
+            <input name="taskName" type="text"><br>
+            <label>Data wykonania</label><br>
+            <input name="endDate" type="date" value="<%= formatDate(new Date()) %>"><br>
+            <label>Status</label><br>
+            <select name="taskStatus"><br>
+                <option>DO ZROBIENIA</option>
+                <option>WYKONANE</option>
+                <option>ANULOWANE</option>
+            </select><br>
+            <button type="submit">Dodaj zadanie</button>
+        </form>
+    </section>
+    <% if (error) { %>
+        <p class="add-task-text" style="color: red;"><%= error %></p>
+    <% } %>
+    <p class="add-task-text"><a href="/panel">Anuluj dodawanie zadania</a></p>
+</section>
+</div>
+</body>
+</html>

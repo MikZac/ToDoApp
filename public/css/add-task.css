@@ -1,0 +1,32 @@
+.add-task {
+    margin: auto;
+    text-align: center;
+    border: 1px solid whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 70px;
+}
+.add-task label {
+    font-size: 15px;
+}
+.add-task input {
+    margin-top: 10px;
+} 
+.add-task input:focus {
+    outline: 0px;
+}
+.add-task select {
+    margin-bottom: 20px;
+}
+.add-task button {
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.add-task-text {
+    font-size: 12px;
+}
+.add-task-text  a {
+    border: 0px;
+}

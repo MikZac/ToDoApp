@@ -1,0 +1,70 @@
+
+.register {
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+.register-headline {
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.register-label {
+    font-size: 13px;
+}
+.register-input {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 5px;
+    height: 10px;
+    border: 0px;
+}
+.register-button {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    color: #9a56ff;
+    border-radius: 5px;
+
+    border: 1px solid whitesmoke;
+}
+.register-error {
+    font-size: 12px;
+    font-weight: 600;
+    color: red;
+    margin-bottom: 10px;
+
+}
+.register-success {
+    font-size: 12px;
+    font-weight: 600;
+    color: greenyellow;
+    margin-bottom: 10px;
+
+}
+.register-text {
+    font-size: 12px;
+}
+.register-link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border: 0px;
+
+}

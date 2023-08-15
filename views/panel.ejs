@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/panel.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+
+    
+    <h1 class="panel-headline">Panel zarządzania zadaniami</h1>
+    
+    <section class="table-task">
+       
+        <div class="table-task-name column">
+            <span class="column-title">Nazwa zadania</span>
+            <% tasks.forEach(task => { %>
+                <span class="task-row"><%= task.name %></span>
+                <% }); %>
+        </div>
+        <div class="table-task-add-date column">
+            <span class="column-title">Data dodania</span>
+            <% tasks.forEach(task => { %>
+                <span class="task-row"><%= format(task.add_date, 'dd-MM-yyyy') %></span>
+                <% }); %>
+        </div>
+        <div class="table-task-finish-date column">
+            <span class="column-title">Data zakończenia</span>
+            <% tasks.forEach(task => { %>
+                <span class="task-row"><%= format(task.end_date, 'dd-MM-yyyy') %></span>
+                <% }); %>
+        </div>
+        <div class="table-task-status column">
+            <span class="column-title">Status zadania</span>
+            <% tasks.forEach(task => { %>
+                <form action="/statusTask" method="post">
+                    <input type="hidden" name="taskId" value="<%= task.id %>">
+                    <select class="task-row" name="status">
+                        <option value="DO ZROBIENIA" <%= task.status === 'DO ZROBIENIA' ? 'selected' : '' %>>DO ZROBIENIA</option>
+                        <option value="WYKONANE" <%= task.status === 'WYKONANE' ? 'selected' : '' %>>WYKONANE</option>
+                        <option value="ANULOWANE" <%= task.status === 'ANULOWANE' ? 'selected' : '' %>>ANULOWANE</option>
+                    </select>
+                    <button type="submit">Zmień</button>
+            </form>
+                <% }); %>
+                
+        </div>
+        <div class="table-task-edit column">
+            <span panel-button class="column-title">Edycja</span>
+            <% tasks.forEach(task => { %>
+                <a class="task-row" href="/updateTask/<%= task.id %>">Edytuj</a>
+                <% }); %>
+        </div>
+        <div class="table-task-delete column">
+            <span class="column-title">Usuń</span>
+            <% tasks.forEach(task => { %>
+                <form action="/deleteTask" method="post">
+                    <input type="hidden" name="taskId" value="<%= task.id %>">
+                    <button class="task-row delete-button" type="submit">Usuń</button>
+                </form>
+                
+                <% }); %>
+        </div>
+        
+    </section>
+    <a class="add-task-button" href="/addTask">Dodaj Zadanie</a>
+</div>
+</body>
+</html>

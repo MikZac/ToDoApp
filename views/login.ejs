@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+    
+    <title>Zaloguj się </title>
+</head>
+<body>
+    <div class="background">
+    <section class="login-wrapper">
+    <h1 class="login-headline">Zaloguj się</h1>
+    <form class="login-form" method="post" action="login">
+        <label class="login-form-label">Podaj adres E-mail</label><br>
+        <input class="login-form-input" type="email" name="email"><br>
+        <label class="login-form-label">Podaj Hasło</label><br>
+        <input class="login-form-input" type="password" name="password"><br>
+        <input class="login-button" type="submit" value="Zaloguj się">
+    </form>
+    <% if (error) { %>
+        <p class="login-error"><%= error %></p>
+    <% } %>
+    <p class="login-wrapper-text">Nie masz jeszcze konta?</p>
+    <p class="login-wrapper-text"><a class="login-wrapper-link" href="registration">Załóż je!</a></p>
+</section>
+</div>
+</body>
+</html>

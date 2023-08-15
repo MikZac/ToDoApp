@@ -1,0 +1,71 @@
+
+.table-task {
+    display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-items: center;
+align-content: flex-start;
+margin-bottom: 30px;
+border: 1px solid ;
+padding-top: 20px;
+padding-bottom: 20px;
+margin-left: 10px;
+margin-right: 10px;
+
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+.column-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.panel-headline {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.add-task-button {
+    border: 1px solid whitesmoke;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    transition: .2s;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.add-task-button:hover {
+    background-color: white;
+    color: rgba(154, 86, 255, 1);
+}
+.table-task-status select {
+    font-size: 12px;
+    border: 0px;
+    background-color: rgba(154, 86, 255, 1);
+    color: white;
+    border-radius: 5px;
+}
+.task-row {
+    margin-bottom: 7px;
+}
+.delete-button {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background-color: #d12f2f;
+    border: 0px;
+    padding: 4px;
+}

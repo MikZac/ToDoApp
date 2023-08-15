@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/add-task.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+        <section class="add-task">
+
+        
+    <h1>Edytuj zadanie: <%= task.name %> </h1><br>
+    <section >
+        <form action="/updateTask/<%= task.id %>" method="POST">
+            <label>Nazwa zadania</label><br>
+            <input name="taskName" type="text" value="<%= task.name %>"><br>
+            <label>Data wykonania</label><br>
+            <input name="taskEndDate" type="date" value="<%= task.end_date ? formatDate(task.end_date) : formatDate(new Date()) %>"><br>
+            <label>Status</label><br>
+            <select name="taskStatus">
+                <option value="DO ZROBIENIA" <%= task.status === 'DO ZROBIENIA' ? 'selected' : '' %>>DO ZROBIENIA</option>
+                <option value="WYKONANE" <%= task.status === 'WYKONANE' ? 'selected' : '' %>>WYKONANE</option>
+                <option value="ANULOWANE" <%= task.status === 'ANULOWANE' ? 'selected' : '' %>>ANULOWANE</option>
+            </select><br>
+            <button type="submit">Edytuj zadanie</button>
+        </form>
+    </section>
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+
+    
+    <section class="register">
+
+    
+    <h1 class="register-headline">Zarejestruj się</h1><br>
+    <form method="post" action="/registration">
+        <label class="register-label">Podaj nazwę użytkownika</label><br>
+        <input class="register-input" type="text" name="name"><br>
+        <label class="register-label">Podaj adres E-mail</label><br>
+        <input class="register-input" type="email" name="email"><br>
+        <label class="register-label">Podaj Hasło</label><br>
+        <input class="register-input" type="password" name="password"><br>
+        <input class="register-button" type="submit" value="Zarejestruj się"><br>
+    </form>
+    <% if (success) { %>
+        <p class="register-success">Rejestracja pomyślna!</p>
+    <% } %>
+    <!-- Dodaj ten fragment do formularza -->
+<% if (error) { %>
+    <p class="register-error"><%= error %></p>
+<% } %>
+
+<p class="register-text">Masz już konto?</p>
+<p class="register-text"><a href="/login" class="register-link">Zaloguj się!</a></p>
+</section>
+</div>
+</body>
+</html>
